@@ -1,3 +1,4 @@
-from .logging_config import get_logger
+import logging.config
 
-__logger__ = get_logger()
+logging.config.fileConfig("logging.conf", disable_existing_loggers=False)
+logger = logging.getLogger("app")

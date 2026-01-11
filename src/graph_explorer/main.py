@@ -1,29 +1,8 @@
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent))
-
-
-from logging_config import get_logger
-
-logger = get_logger(__name__)
-
-
-def run() -> str:
-    from test_module import user_test
-
-    user_test()
-    return None
+from graph_explorer import logger
 
 
 def main() -> None:
-    try:
-        run()
-    except KeyboardInterrupt:
-        logger.info("Application interrupted by user")
-    except Exception as e:
-        logger.error(f"Application failed: {e}", exc_info=True)
-        sys.exit(1)
+    logger.info("main() called")
     return None
 
 

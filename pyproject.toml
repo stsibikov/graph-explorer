@@ -5,7 +5,7 @@ description = "This is a template repository for Python projects that use uv for
 authors = [{ name = "Sergey Tsibikov", email = "tsibikov.sergei@gmail.com" }]
 readme = "README.md"
 keywords = ['python']
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.12"
 classifiers = [
     "Intended Audience :: Developers",
     "Programming Language :: Python",
@@ -50,6 +50,9 @@ python-version = "3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.uv]
+python-preference = "only-managed"
 
 [tool.ruff]
 target-version = "py312"
